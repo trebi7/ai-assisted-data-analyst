@@ -1,4 +1,4 @@
-# AI-Assisted Data Analyst Portfolio
+# AI-Assisted Data Analyst
 ### WASH Data Analysis — Côte d'Ivoire 2026
 
 This project demonstrates how **Claude AI** (Anthropic) was used end-to-end as a data analyst assistant — from data collection to dashboard delivery — on a real-world WASH (Water, Sanitation and Hygiene) dataset covering two departments in Côte d'Ivoire.
@@ -87,9 +87,9 @@ Claude automated the creation of a professional Excel dashboard (`create_dashboa
 
 ---
 
-## About This Portfolio
+## About This Project
 
-This project was built as a **portfolio piece** to demonstrate AI-assisted data analysis capabilities for NGO, humanitarian, and development sector clients on Upwork. Every line of code, every chart, every report section, and every insight was produced in collaboration with **Claude (Anthropic)** — showcasing how AI can dramatically accelerate the full data analysis pipeline without sacrificing rigor or quality.
+This project demonstrates AI-assisted data analysis capabilities for NGO, humanitarian, and development sector clients. Every line of code, every chart, every report section, and every insight was produced in collaboration with **Claude (Anthropic)** — showcasing how AI can dramatically accelerate the full data analysis pipeline without sacrificing rigor or quality.
 
 ---
 
