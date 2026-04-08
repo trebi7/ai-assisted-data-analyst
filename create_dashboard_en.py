@@ -175,7 +175,7 @@ shutil.copy2(FILE_PATH, OUTPUT_PATH)
 
 # -- Open with win32com --------------------------------------------------------
 print(">>>  Opening Excel...")
-excel = win32.gencache.EnsureDispatch('Excel.Application')
+excel = win32.Dispatch('Excel.Application')
 excel.Visible = False
 excel.DisplayAlerts = False
 excel.ScreenUpdating = False
