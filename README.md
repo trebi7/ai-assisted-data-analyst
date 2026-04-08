@@ -1,52 +1,54 @@
 # AI-Assisted Data Analyst
 ### WASH Data Analysis — Côte d'Ivoire 2026
 
-This project demonstrates how **Claude AI** (Anthropic) was used end-to-end as a data analyst assistant — from data collection to dashboard delivery — on a real-world WASH (Water, Sanitation and Hygiene) dataset covering two departments in Côte d'Ivoire.
+This project demonstrates a **human-guided, AI-assisted** approach to data analysis — where the analyst drives every decision and Claude AI executes the technical work under direction. The subject is a WASH (Water, Sanitation and Hygiene) survey covering 1,000 households across two departments in Côte d'Ivoire.
+
+> **How it works:** The analyst defines the objectives, chooses the methods, reviews the outputs, and steers each step. Claude translates those instructions into code, visualizations, and written content — acting as an AI copilot, not an autonomous agent.
 
 ---
 
-## How Claude AI Powered the Entire Workflow
+## Guided Workflow — Step by Step
 
 ### 1. Data Collection & Structuring
-Claude helped design the data collection structure by generating a realistic, field-ready dataset (`wash_test_data.xlsx`) with 1,000 survey records across variables such as water sources, water quality, sanitation infrastructure, hygiene practices, and geographic segmentation by department and village. This mirrors what a field data collection form (KoBoToolbox, ODK) would produce.
+The analyst specified the survey variables, geographic coverage, and field categories required for a WASH assessment. Under those instructions, Claude generated a realistic, field-ready dataset (`wash_test_data.xlsx`) with 1,000 records — mirroring what a KoBoToolbox or ODK form would produce.
 
 ### 2. Data Cleaning & Preparation
-Claude identified and applied data cleaning logic directly in Python:
-- Standardization of categorical values (e.g., source types, quality labels)
+The analyst identified the data quality issues to address and defined the cleaning rules. Claude then applied them in Python:
+- Standardization of categorical values (source types, quality labels)
 - Handling of missing and inconsistent entries
 - Aggregation by department, village, and indicator type
 - Preparation of pivot-ready structures for Excel and chart generation
 
 ### 3. Data Processing & Analysis
-Claude wrote all the data processing code, performing:
+The analyst determined which indicators to compute and how to segment the data. Claude implemented the logic:
 - Frequency distributions and cross-tabulations
 - Departmental comparisons (Goh vs. Loh Djiboua)
 - KPI calculations: access rate, treatment rate, open defecation rate, handwashing rate
 - Identification of critical gaps and priority zones
 
 ### 4. Data Visualization
-Claude generated all charts using `matplotlib` (`generate_charts.py`, `generate_charts_en.py`):
+The analyst chose the chart types, the indicators to display, and the visual style. Claude produced all charts using `matplotlib` (`generate_charts.py`, `generate_charts_en.py`):
 - Donut chart: water supply sources breakdown
 - Grouped bar chart: water quality by department
 - Stacked bar chart: sanitation infrastructure by department
 - Bar charts: hygiene practices, water treatment methods, gender-disaggregated data
 
-All charts follow the official WASH color palette and are exported for embedding in both HTML and Word reports.
+All charts follow the official WASH color palette.
 
 ### 5. Report Generation
-Claude built two automated report generators:
-- **HTML Report** (`generate_html_report.py` / `_en.py`): a fully styled, responsive web report with embedded charts, KPI cards, key findings, and recommendations — ready to share with stakeholders
-- **Word Report** (`generate_word_report.py` / `_en.py`): a professional `.docx` report with formatted tables, inserted charts, and narrative analysis sections — ready for institutional submission
+The analyst defined the report structure, sections, and narrative tone. Claude generated two automated report formats:
+- **HTML Report** (`generate_html_report.py` / `_en.py`): responsive web report with embedded charts, KPI cards, key findings, and recommendations
+- **Word Report** (`generate_word_report.py` / `_en.py`): formatted `.docx` with tables, charts, and narrative sections ready for institutional submission
 
 All reports are available in both **French** and **English**.
 
 ### 6. Excel Dashboard
-Claude automated the creation of a professional Excel dashboard (`create_dashboard.py` / `_en.py`) using `win32com` and `openpyxl`, including:
+The analyst specified the dashboard layout, KPIs to highlight, and filtering dimensions. Claude automated the build using `win32com` and `openpyxl`:
 - Raw data sheet with full dataset
 - Summary sheets with KPIs and aggregated tables
-- Native Excel charts (bar, pie, column)
+- 11 native Excel charts (bar, pie, column, donut)
+- 5 slicers: Department, Sub-prefecture, Water Source, Water Quality, Month
 - Conditional formatting and branded color scheme
-- Structured layout with headers, borders, and print-ready formatting
 
 ---
 
@@ -55,7 +57,8 @@ Claude automated the creation of a professional Excel dashboard (`create_dashboa
 | File | Description |
 |---|---|
 | `wash_test_data.xlsx` | Source dataset (1,000 survey records) |
-| `WASH_Dashboard.xlsx` | Full Excel dashboard with charts and KPIs |
+| `WASH_Dashboard.xlsx` | Excel dashboard — French |
+| `WASH_Dashboard_EN.xlsx` | Excel dashboard — English |
 | `WASH_Rapport.html` | HTML report — French |
 | `WASH_Report_EN.html` | HTML report — English |
 | `WASH_Rapport.docx` | Word report — French |
@@ -73,7 +76,7 @@ Claude automated the creation of a professional Excel dashboard (`create_dashboa
 | `matplotlib` | Chart generation |
 | `python-docx` | Word report generation |
 | HTML / CSS | Responsive web report |
-| **Claude AI** | Data design, cleaning logic, full code generation, analysis, narrative writing |
+| **Claude AI** | Code generation, visualization, report writing — under analyst direction |
 
 ---
 
@@ -89,7 +92,7 @@ Claude automated the creation of a professional Excel dashboard (`create_dashboa
 
 ## About This Project
 
-This project demonstrates AI-assisted data analysis capabilities for NGO, humanitarian, and development sector clients. Every line of code, every chart, every report section, and every insight was produced in collaboration with **Claude (Anthropic)** — showcasing how AI can dramatically accelerate the full data analysis pipeline without sacrificing rigor or quality.
+This project illustrates how an analyst can leverage AI as a productivity tool — not a replacement for analytical thinking. The domain expertise, the methodological choices, and the quality control are entirely human. Claude AI handles the implementation: writing the code, generating the charts, formatting the reports. The result is a complete, professional-grade data analysis delivered at a fraction of the usual time.
 
 ---
 
