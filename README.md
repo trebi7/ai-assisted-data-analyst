@@ -56,13 +56,10 @@ The analyst specified the dashboard layout, KPIs to highlight, and filtering dim
 
 | File | Description |
 |---|---|
-| `wash_test_data.xlsx` | Source dataset (1,000 survey records) |
-| `WASH_Dashboard.xlsx` | Excel dashboard — French |
-| `WASH_Dashboard_EN.xlsx` | Excel dashboard — English |
 | `WASH_Rapport.html` | HTML report — French |
 | `WASH_Report_EN.html` | HTML report — English |
-| `WASH_Rapport.docx` | Word report — French |
-| `WASH_Report_EN.docx` | Word report — English |
+
+The source dataset, the Excel dashboards and the Word reports are not published. They are available on request: armanddavy7@gmail.com
 
 ---
 
